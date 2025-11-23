@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>主面人 - 香港启航 SOP标准化运营官网</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@400;700&family=Noto+Sans+SC:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        zmr: {
+                            blue: '#003B73', /* 品牌主色：藏青蓝 */
+                            lightBlue: '#0056b3',
+                            wood: '#E0BC86', /* 品牌辅色：原木金 */
+                            woodDark: '#C19A6B',
+                            white: '#ffffff'
+                        }
+                    },
+                    fontFamily: {
+                        brand: ['"Ma Shan Zheng"', 'cursive'],
+                        serif: ['"Noto Serif SC"', 'serif'],
+                        sans: ['"Noto Sans SC"', 'sans-serif']
+                    },
+                    backgroundImage: {
+                        'wave-pattern': "url('data:image/svg+xml,%3Csvg width=\\'100\\' height=\\'20\\' viewBox=\\'0 0 100 20\\' xmlns=\\'http://www.w3.org/2000/svg\\'%3E%3Cpath d=\\'M21.184 20c.357-.13.72-.264 1.088-.402l1.768-.661C33.64 15.347 39.647 14 50 14c10.271 0 15.362 1.222 24.629 4.928.955.383 1.869.74 2.75 1.072h6.225c-2.51-.73-5.139-1.691-8.233-2.928C65.888 13.278 60.562 12 50 12c-10.626 0-16.855 1.397-26.66 5.063l-1.767.662c-2.475.923-4.66 1.674-6.724 2.275h6.335zm0-20C13.258 2.892 8.077 4 0 4V2c5.744 0 9.951-.574 14.85-2h6.334zM77.38 0C85.239 2.966 90.502 4 100 4V2c-6.842 0-11.386-.542-16.396-2h-6.225zM0 14c8.44 0 13.718-1.21 22.272-4.402l1.768-.661C33.64 5.347 39.647 4 50 4c10.271 0 15.362 1.222 24.629 4.928C84.112 12.722 89.438 14 100 14v-2c-10.271 0-15.362-1.222-24.629-4.928C65.888 3.278 60.562 2 50 2 39.374 2 33.145 3.397 23.34 7.063l-1.767.662C13.223 10.84 8.163 12 0 12v2z\\' fill=\\'%23ffffff\\' fill-opacity=\\'0.05\\' fill-rule=\\'evenodd\\'/%3E%3C/svg%3E')"
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .wood-btn {
+            background-color: #E0BC86;
+            background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23C19A6B' fill-opacity='0.2' fill-rule='evenodd'%3E%3Cpath d='M0 38.59l2.83-2.83 1.41 1.41L1.41 40H0v-1.41zM0 1.4l2.83 2.83 1.41-1.41L1.41 0H0v1.41zM38.59 40l-2.83-2.83 1.41-1.41L40 38.59V40h-1.41zM40 1.41l-2.83 2.83-1.41-1.41L38.59 0H40v1.41zM20 18.6l2.83-2.83 1.41 1.41L21.41 20l2.83 2.83-1.41 1.41L20 21.41l-2.83 2.83-1.41-1.41L18.59 20l-2.83-2.83 1.41-1.41L20 18.59z'/%3E%3C/g%3E%3C/svg%3E");
+            border: 2px solid #C19A6B;
+            color: #003B73;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        .wood-btn:hover { transform: translateY(-2px); box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+        
+        .wood-card {
+            background: #fff;
+            border: 1px solid #E0BC86;
+            box-shadow: 0 4px 6px -1px rgba(0, 59, 115, 0.1);
+        }
+
+        .reveal-up { animation: fadeInUp 1s ease-out forwards; opacity: 0; transform: translateY(30px); }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-400 { animation-delay: 0.4s; }
+        @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+    <nav class="fixed w-full z-50 bg-zmr-blue/95 backdrop-blur text-white shadow-lg border-b-4 border-zmr-wood">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-white rounded-full border-2 border-zmr-wood flex items-center justify-center overflow-hidden">
+                    <i class="fas fa-cow text-zmr-blue text-xl"></i>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-2xl font-brand tracking-widest leading-none">主面人</span>
+                    <span class="text-[10px] text-zmr-wood tracking-[0.2em] uppercase">Zhu Mian Ren</span>
+                </div>
+            </div>
+            <div class="hidden md:flex space-x-6 font-medium text-sm">
+                <a href="#home" class="hover:text-zmr-wood transition">首页</a>
+                <a href="#sop" class="text-zmr-wood font-bold border-b border-zmr-wood pb-1">SOP运营标准</a>
+                <a href="#origin" class="hover:text-zmr-wood transition">地道食材</a>
+                <a href="#menu" class="hover:text-zmr-wood transition">镇店之宝</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="relative min-h-[90vh] flex items-center bg-zmr-blue bg-wave-pattern pt-20 overflow-hidden">
+        <div class="absolute top-20 right-0 w-[800px] h-[800px] bg-zmr-lightBlue rounded-full blur-3xl opacity-20 -translate-y-1/2 translate-x-1/3"></div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-5/12 text-white reveal-up">
+                    <div class="inline-block mb-4 px-4 py-1 border border-zmr-wood text-zmr-wood rounded-full text-sm tracking-wider bg-black/20 backdrop-blur-sm font-serif">
+                        香江启航 · 香港十店战略
+                    </div>
+                    <h1 class="text-5xl md:text-7xl font-brand mb-6 leading-tight drop-shadow-lg">
+                        千年传承<br>
+                        <span class="text-zmr-wood">一碗面</span>
+                    </h1>
+                    <p class="text-lg text-blue-100 mb-8 font-serif leading-relaxed opacity-90">
+                        青海喇家遗址出土的4000年前的一碗面，凝结了先民智慧。<br>
+                        现在，我们带着<b>“标准化、可复制”</b>的SOP体系，在香港续写传奇。
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#sop" class="wood-btn px-8 py-3 rounded-lg text-lg shadow-lg flex items-center">
+                            <i class="fas fa-book-reader mr-2"></i> 查看SOP标准
+                        </a>
+                    </div>
+                </div>
+                <div class="lg:w-7/12 relative reveal-up delay-200">
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-zmr-wood group bg-black h-[450px]">
+                        <img src="artiphoria-Modern Chinese noodl.png" 
+                             class="w-full h-full object-cover opacity-80">
+                         <div class="absolute bottom-0 w-full bg-gradient-to-t from-black to-transparent p-6 flex justify-around text-center border-t border-zmr-wood/30">
+                            <div>
+                                <div class="text-2xl font-bold text-zmr-wood font-brand">14天</div>
+                                <div class="text-xs text-gray-300">快速上岗周期</div>
+                            </div>
+                            <div>
+                                <div class="text-2xl font-bold text-zmr-wood font-brand">10店</div>
+                                <div class="text-xs text-gray-300">香港战略目标</div>
+                            </div>
+                            <div>
+                                <div class="text-2xl font-bold text-zmr-wood font-brand">100%</div>
+                                <div class="text-xs text-gray-300">全员持证上岗</div>
+                            </div>
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sop" class="py-20 bg-white relative">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 reveal-up">
+                <span class="text-zmr-blue font-bold tracking-widest uppercase text-sm">Operation Excellence</span>
+                <h2 class="text-4xl font-brand text-zmr-blue mt-2">SOP 岗前标准培训体系</h2>
+                <div class="w-24 h-1 bg-zmr-wood mx-auto mt-4 rounded-full"></div>
+                <p class="mt-4 text-gray-600 font-serif">标准化 · 可复制 · 创卓越</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16 reveal-up delay-200">
+                <div class="wood-card p-6 rounded-xl hover:-translate-y-2 transition duration-300">
+                    <div class="text-zmr-blue text-4xl mb-4"><i class="fas fa-flag"></i></div>
+                    <h3 class="font-brand text-xl text-zmr-blue mb-2">统一标准</h3>
+                    <p class="text-sm text-gray-600 text-justify">
+                        “十家门店，一个标准”。确保所有门店严格执行统一SOP，实现服务、产品、体验的一致性 [cite: 3, 40]。
+                    </p>
+                </div>
+                <div class="wood-card p-6 rounded-xl hover:-translate-y-2 transition duration-300">
+                    <div class="text-zmr-woodDark text-4xl mb-4"><i class="fas fa-stopwatch"></i></div>
+                    <h3 class="font-brand text-xl text-zmr-blue mb-2">14天 快速上岗</h3>
+                    <p class="text-sm text-gray-600 text-justify">
+                        建立系统化培训体系，将新员工培训周期固化在14天内。支持新店快速开业 [cite: 28, 41]。
+                    </p>
+                </div>
+                <div class="wood-card p-6 rounded-xl hover:-translate-y-2 transition duration-300">
+                    <div class="text-zmr-blue text-4xl mb-4"><i class="fas fa-users-cog"></i></div>
+                    <h3 class="font-brand text-xl text-zmr-blue mb-2">一人多岗</h3>
+                    <p class="text-sm text-gray-600 text-justify">
+                        6-8人实现传统10人团队产出。通过交叉培训，优化人力成本20% [cite: 100, 101]。
+                    </p>
+                </div>
+                <div class="wood-card p-6 rounded-xl hover:-translate-y-2 transition duration-300">
+                    <div class="text-zmr-woodDark text-4xl mb-4"><i class="fas fa-certificate"></i></div>
+                    <h3 class="font-brand text-xl text-zmr-blue mb-2">全员持证</h3>
+                    <p class="text-sm text-gray-600 text-justify">
+                        100%员工持证上岗。起薪16,000港币吸引优质人才，赋予职业尊严 [cite: 43, 96, 98]。
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-gray-50 rounded-2xl p-8 border border-gray-200 reveal-up delay-400">
+                <h3 class="text-2xl font-brand text-zmr-blue mb-6 text-center">核心培训模块矩阵 (M1-M7)</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div class="flex items-center p-3 bg-white rounded shadow-sm border-l-4 border-zmr-blue">
+                        <span class="font-bold text-zmr-blue mr-3">M1</span> 品牌文化与入职引导
+                    </div>
+                    <div class="flex items-center p-3 bg-white rounded shadow-sm border-l-4 border-zmr-wood">
+                        <span class="font-bold text-zmr-woodDark mr-3">M2</span> 员工服务素养 SOP
+                    </div>
+                    <div class="flex items-center p-3 bg-white rounded shadow-sm border-l-4 border-zmr-blue">
+                        <span class="font-bold text-zmr-blue mr-3">M3</span> 食品安全与卫生规范
+                    </div>
+                    <div class="flex items-center p-3 bg-white rounded shadow-sm border-l-4 border-zmr-wood">
+                        <span class="font-bold text-zmr-woodDark mr-3">M4</span> 拉面工艺专项技能
+                    </div>
+                    <div class="flex items-center p-3 bg-white rounded shadow-sm border-l-4 border-zmr-blue">
+                        <span class="font-bold text-zmr-blue mr-3">M5</span> 前厅运营专项管理
+                    </div>
+                    <div class="flex items-center p-3 bg-white rounded shadow-sm border-l-4 border-zmr-wood">
+                        <span class="font-bold text-zmr-woodDark mr-3">M6</span> 后厨备料与安全操作
+                    </div>
+                    <div class="flex items-center p-3 bg-white rounded shadow-sm border-l-4 border-zmr-blue md:col-span-2 lg:col-span-3 justify-center">
+                        <span class="font-bold text-zmr-blue mr-3">M7</span> 门店管理运营 (店长级)
+                    </div>
+                </div>
+                <p class="text-xs text-gray-400 text-right mt-4">* 引用自 SOP岗前标准培训企划案 </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="origin" class="py-20 bg-zmr-blue text-white relative">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 reveal-up">
+                <h2 class="text-4xl font-brand text-white">源起青海 · 高原硬货</h2>
+                <div class="w-24 h-1 bg-zmr-wood mx-auto mt-4 rounded-full"></div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8 reveal-up delay-200">
+                <div class="text-center group">
+                    <div class="w-20 h-20 mx-auto bg-white/10 rounded-full flex items-center justify-center mb-4 text-3xl border border-zmr-wood group-hover:bg-zmr-wood group-hover:text-zmr-blue transition">💧</div>
+                    <h3 class="text-xl font-bold mb-2">三江源之水</h3>
+                    <p class="text-sm opacity-70">来自中华水塔的纯净馈赠。</p>
+                </div>
+                <div class="text-center group">
+                    <div class="w-20 h-20 mx-auto bg-zmr-wood text-zmr-blue rounded-full flex items-center justify-center mb-4 text-3xl border border-white shadow-glow">🐂</div>
+                    <h3 class="text-xl font-bold mb-2">吃虫草的牦牛</h3>
+                    <p class="text-sm opacity-70">喝矿泉水，吃冬虫夏草长大的高原牦牛。</p>
+                </div>
+                <div class="text-center group">
+                    <div class="w-20 h-20 mx-auto bg-white/10 rounded-full flex items-center justify-center mb-4 text-3xl border border-zmr-wood group-hover:bg-zmr-wood group-hover:text-zmr-blue transition">🌾</div>
+                    <h3 class="text-xl font-bold mb-2">高原优质小麦</h3>
+                    <p class="text-sm opacity-70">日照充足，每一次搓揉都是风土人情的结晶。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center gap-10 reveal-up">
+                <div class="md:w-1/2">
+                    <div class="relative rounded-2xl overflow-hidden border-4 border-zmr-wood shadow-xl">
+                        <img src="tmpn_e9pqxz.png" class="w-full h-auto">
+                        <div class="absolute top-4 right-4 bg-zmr-blue text-white px-3 py-1 font-bold rounded shadow"></div>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-4xl font-brand text-zmr-blue mb-4">牦牛骨汤牛肉面</h2>
+                    <p class="text-gray-600 mb-6 font-serif leading-relaxed">
+                        日均销量 300+ 碗 。<br>
+                        精选大片牦牛肉，搭配清爽牛骨汤。每一碗都经过严格的 SOP 出餐标准考核，保障品质如一。
+                    </p>
+                    <div class="flex gap-4">
+                        <span class="px-4 py-2 bg-gray-200 rounded text-xs text-gray-600">M4 拉面工艺认证</span>
+                        <span class="px-4 py-2 bg-gray-200 rounded text-xs text-gray-600">6S 卫生标准</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#002a52] text-white py-10 border-t border-zmr-wood/30 text-center font-serif">
+        <h1 class="text-3xl font-brand mb-4 text-zmr-wood">主面人</h1>
+        <p class="text-sm opacity-70 mb-2">香港 · 北京 · 深圳</p>
+        <p class="text-xs text-gray-400">
+            &copy; 2025 主面人餐饮管理有限公司. All rights reserved. <br>
+            SOP Training Supported by Siheng Education [cite: 6]
+        </p>
+    </footer>
+
+</body>
+</html>
